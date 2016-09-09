@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="./css/stylesheet.css" rel="stylesheet">
+		<script src="./js/rubik.js"></script>
+	</head>
+	<body>
+	<center>
+		<table id="demo">
+			<tr>
+				<td id="button" style="background: gray;"><button onclick="rotateUp()">&#8593;</button></td>
+				<td id="button"><button onclick="rotateColumnUp(0)">&#8593;</button></td>
+				<td id="button"><button onclick="rotateColumnUp(1)">&#8593;</button></td>
+				<td id="button"><button onclick="rotateColumnUp(2)">&#8593;</button></td>
+				<td id="button" style="background: gray;"><button onclick="rotateRight()">&#8594;</button></td>
+			</tr>
+			<tr>
+				<td id="button"><button>&#8592;</button></td>
+				<td id="00"></td>
+				<td id="01"></td>
+				<td id="02"></td>
+				<td id="button"><button>&#8594;</button></td>
+			</tr>
+			<tr>
+				<td id="button"><button>&#8592;</button></td>
+				<td id="10"></td>
+				<td id="11"></td>
+				<td id="12"></td>
+				<td id="button"><button>&#8594;</button></td>
+			</tr>
+			<tr>
+				<td id="button"><button>&#8592;</button></td>
+				<td id="20"></td>
+				<td id="21"></td>
+				<td id="22"></td>
+				<td id="button"><button>&#8594;</button></td>
+			</tr>
+			<tr>
+				<td id="button" style="background: gray;"><button onclick="rotateLeft()">&#8592;</button></td>
+				<td id="button"><button onclick="rotateColumnDown(0)">&#8595;</button></td>
+				<td id="button"><button onclick="rotateColumnDown(1)">&#8595;</button></td>
+				<td id="button"><button onclick="rotateColumnDown(2)">&#8595;</button></td>
+				<td id="button"  style="background: gray;"><button onclick="rotateDown()">&#8595;</button></td>
+			</tr>
+		</table>
+	</center>
+	
+	<script src="./js/rubik.js"></script>
+	</body>
+</html>
