@@ -132,18 +132,18 @@ function rotateColumnDown(x){
 
 function rotateRowLeft(x){
 	
-	var bufferRowFront = [[up[0][x]], [up[1][x]], [up[2][x]]];
-	var bufferRowLeft = [[front[0][x]], [front[1][x]], [front[2][x]]];
-	var bufferRowRight = [[down[0][x]], [down[1][x]], [down[2][x]]];
-	var bufferColumnBack = [[back[0][x]], [back[1][x]], [back[2][x]]];
+	var bufferRowFront = [front[x][0], front[x][1], front[x][2]];
+	var bufferRowLeft = [left[x][0], left[x][1], left[x][2]];
+	var bufferRowRight = [right[x][0], right[x][1], right[x][2]];
+	var bufferRowBack = [back[x][0], back[x][1], back[x][2]];
 	
 	//front->up -- up->back -- back->down -- down->front
 	
 	for(i = 0; i < 3; i++){
-		up[i][x] = bufferColumnFront[i][0];
-		back[i][x] = bufferColumnUp[i][0];
-		down[i][x] = bufferColumnBack[i][0];
-		front[i][x] = bufferColumnDown[i][0];
+		left[x][i] = bufferRowFront[i];
+		back[x][i] = bufferRowLeft[i];
+		right[x][i] = bufferRowBack[i];
+		front[x][i] = bufferRowRight[i];
 	}
 	
 	showFront();
@@ -152,18 +152,18 @@ function rotateRowLeft(x){
 
 function rotateRowRight(x){
 	
-	var bufferColumnUp = [[up[0][x]], [up[1][x]], [up[2][x]]];
-	var bufferColumnFront = [[front[0][x]], [front[1][x]], [front[2][x]]];
-	var bufferColumnDown = [[down[0][x]], [down[1][x]], [down[2][x]]];
-	var bufferColumnBack = [[back[0][x]], [back[1][x]], [back[2][x]]];
+	var bufferRowFront = [front[x][0], front[x][1], front[x][2]];
+	var bufferRowLeft = [left[x][0], left[x][1], left[x][2]];
+	var bufferRowRight = [right[x][0], right[x][1], right[x][2]];
+	var bufferRowBack = [back[x][0], back[x][1], back[x][2]];
 	
 	//front->up -- up->back -- back->down -- down->front
 	
 	for(i = 0; i < 3; i++){
-		up[i][x] = bufferColumnFront[i][0];
-		back[i][x] = bufferColumnUp[i][0];
-		down[i][x] = bufferColumnBack[i][0];
-		front[i][x] = bufferColumnDown[i][0];
+		right[x][i] = bufferRowFront[i];
+		back[x][i] = bufferRowRight[i];
+		left[x][i] = bufferRowBack[i];
+		front[x][i] = bufferRowLeft[i];
 	}
 	
 	showFront();
